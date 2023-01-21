@@ -1,8 +1,10 @@
+import 'package:test_owo/andere/constants/routes.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:test_owo/andere/logik.dart';
 import '../lists.dart';
+// import "package:test_owo/andere/screens/ListCheck.dart";
 
 class RandomGen extends StatefulWidget {
   const RandomGen({Key? key}) : super(key: key);
@@ -40,6 +42,26 @@ class _RandomGenState extends State<RandomGen> {
         resizeToAvoidBottomInset: true,
         appBar: AppBar(
           title: const Text("Zufallsgenerator dafür was heute zu tun ist"),
+          actions: [
+            PopupMenuButton(
+              onSelected: (value) {
+                switch (value) {
+                  case true:
+                    Navigator.of(context).pushNamed(listCheckRoute);
+                    print(value);
+                    break;
+                }
+              },
+              itemBuilder: ((context) {
+                return const [
+                  PopupMenuItem(
+                    value: true,
+                    child: Text("check all the list items"),
+                  )
+                ];
+              }),
+            )
+          ],
         ),
         body: Center(
             child: Column(

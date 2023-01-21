@@ -40,12 +40,12 @@ const youtube = [
   "telefonieren",
   "nichts",
   genres.Japanese,
-  "tutoriel",
-  "Aldi Musik alle Favoriten",
-  "Aldi Musik Mix"
+  "tutoriel"
 ];
+
 var library = [
-  Playlist("Aldi Musik", genres.values, "https://app-legacy.napster.com"),
+  Playlist("Toaster (nur meine Lieder", [genres.EDM],
+      "https://music.youtube.com/playlist?list=PLEZw-N-2kUCb97grE-nDfG2y4ITCVELGr&feature=share"),
   Playlist(
       "My Likes", genres.values, "https://music.youtube.com/playlist?list=LM"),
   Playlist("yt mix von der Art", genres.values, "music.youtube.com"),
@@ -126,7 +126,7 @@ var library = [
   Playlist("Tunisia", null,
       "https://music.youtube.com/playlist?list=PLEZw-N-2kUCZMcIXDNY_Mqvx5I6CCFqj1&feature=share"),
   Playlist("Workout", [genres.EDM],
-      "https://music.youtube.com/playlist?list=PLEZw-N-2kUCalikUCuev7cHUKxJG5JVaH&feature=share") //EDM, Dubstep, Epic, Japanese, Lofi
+      "https://music.youtube.com/playlist?list=PLEZw-N-2kUCalikUCuev7cHUKxJG5JVaH&feature=share"), //EDM, Dubstep, Epic, Japanese, Lofi
 ];
 const podcasts = [
   "Joe Rogan",
@@ -177,15 +177,36 @@ const box_com = [
   "Discord",
   "Plutotv",
   "Amazon Freevee",
-  "Apple TV",
   "Sports",
   "Tv time recommendation",
   "Tv time Liste",
   "Manga/Buch",
   "iqiyi",
-  "Aldi Musik"
+  "next thing trash taste talk about",
+  "highest rated TV Show/Movie"
+];
+
+const pesteam = [
+  "tunesische Liga",
+  "tunesische Nationalmannschaft",
+  "meme Team",
+  "No 2 (Haaland) united",
+  "update highest ranked player",
+  "SV Böblingen"
 ];
 
 enum genres { EDM, Dubstep, Epic, Japanese, Lofi }
 
 const screens = [RandomGen(), Pokemon()];
+
+var allLists = {
+  "was heute tun": wasHeuteTun,
+  "youtube": youtube,
+  "library": library,
+  "podcasts": podcasts,
+  "tutoriel": tutoriel,
+  "box_com": box_com,
+  "Pesteam": pesteam,
+  "genres": genres.values,
+  "screens": screens
+};

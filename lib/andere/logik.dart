@@ -1,6 +1,10 @@
 import 'dart:math';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/cupertino.dart';
+
+import '../firebase_options.dart';
 import 'lists.dart';
-import 'package:test_owo/andere/screens/randomgen.dart';
 
 final rand = Random();
 
@@ -67,6 +71,8 @@ List<String> rolf(String enteredText) {
         return ["Podcast: ${zufall2(podcasts)}", "", "", ""];
       else if (auswaha == "tutoriel")
         return ["Tutoriel: ${zufall2(tutoriel)}", "", "", ""];
+      else if (auswaha == "box.com")
+        return ["box.com also: ${zufall2(box_com)}", "", "", ""];
       else
         return [auswaha, "", "", ""];
 
@@ -74,7 +80,7 @@ List<String> rolf(String enteredText) {
       return [zufall2(box_com), "", "", ""];
 
     case "Lofi":
-      hyperlink = filter("Lofi");
+      hyperlink = filter(genres.Lofi);
       return [
         "",
         hyperlink.name,
@@ -82,11 +88,29 @@ List<String> rolf(String enteredText) {
         " und ${hyperlink.wasDann()}"
       ];
 
+    case "pesplayer":
+      return [zufall2(pesteam), "", "", ""];
     default:
       return ["", "", ""];
   }
 }
 
-
-
 // return mit Liste? und das dann als Input Parameter benutzen?
+
+/////////////////////////
+///NICHTS///////////////
+///////////////////////
+Map<String, dynamic> mapConverter(List inputListe) {
+  Map<String, dynamic> returnMap = {};
+  inputListe.forEach((element) {
+    returnMap[inputListe.indexOf(element).toString()] = element;
+  });
+  return returnMap;
+}
+
+var hahaoksdee = mapConverter(youtube);
+Future<void>? rolfKopter() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+}
