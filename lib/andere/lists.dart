@@ -18,7 +18,11 @@ const wasHeuteTun = [
   "Schach lernen",
   "rainmeter skin",
   "sport",
-  "tutoriel"
+  "tutoriel",
+  "aufräumen",
+  "meine aktive Serie eine Folge schauen",
+  "nichts",
+  "aktives Videospiel spielen"
 ];
 const youtube = [
   genres.Lofi,
@@ -141,7 +145,8 @@ const podcasts = [
   "Waveform: The MKBHD Podcast",
   "Quran Garden",
   "neuer Podcast",
-  "alten Podcast entfernen"
+  "alten Podcast entfernen",
+  "Impaulsive"
 ];
 const tutoriel = ["blender", "Dart/Flutter", "Gimp", "Shotcut"];
 
@@ -183,7 +188,8 @@ const box_com = [
   "Manga/Buch",
   "iqiyi",
   "next thing trash taste talk about",
-  "highest rated TV Show/Movie"
+  "highest rated TV Show/Movie",
+  "XCIPTV"
 ];
 
 const pesteam = [

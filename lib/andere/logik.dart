@@ -90,6 +90,8 @@ List<String> rolf(String enteredText) {
 
     case "pesplayer":
       return [zufall2(pesteam), "", "", ""];
+    case "podcasts":
+      return [zufall2(podcasts), "", "", ""];
     default:
       return ["", "", ""];
   }

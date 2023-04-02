@@ -7,7 +7,6 @@ import 'package:test_owo/andere/logik.dart';
 import 'package:test_owo/firebase_options.dart';
 import "package:cloud_firestore/cloud_firestore.dart";
 import 'package:test_owo/screensmanager.dart';
-
 import 'andere/screens/ListCheck.dart';
 
 void main() {
